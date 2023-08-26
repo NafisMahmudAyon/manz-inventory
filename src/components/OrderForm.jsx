@@ -39,7 +39,7 @@ const OrderForm = () => {
     // Fetch product list from the database
     async function fetchProducts() {
       try {
-        const response = await axios.get("http://localhost:5000/api/products");
+        const response = await axios.get("https://manzserver.sqaa-online.com/api/products");
         setProductList(response.data.products);
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -53,7 +53,7 @@ const OrderForm = () => {
     // Fetch color list based on selected product
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/products/${productId}`
+        `https://manzserver.sqaa-online.com/api/products/${productId}`
       );
       setColorList(response.data.colors);
     } catch (error) {
@@ -73,7 +73,7 @@ const OrderForm = () => {
     try {
       console.log(colorId);
       const response = await axios.get(
-        `http://localhost:5000/api/sizes/${colorId}`
+        `https://manzserver.sqaa-online.com/api/sizes/${colorId}`
       );
       setSizeList(response.data.sizes);
     } catch (error) {
@@ -108,7 +108,7 @@ const OrderForm = () => {
     console.log(orderData);
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/place-order",
+        "https://manzserver.sqaa-online.com/api/place-order",
         orderData
       );
 

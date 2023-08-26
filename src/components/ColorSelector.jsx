@@ -10,7 +10,7 @@ const ColorSelector = ({ productId, onSelectColor }) => {
     async function fetchColors() {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/products/${productId}`
+          `https://manzserver.sqaa-online.com/api/products/${productId}`
         );
         setColors(response.data?.colors);
         console.log(response.data);

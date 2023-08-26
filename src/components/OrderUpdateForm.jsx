@@ -10,7 +10,7 @@ const OrderUpdateForm = () => {
     // Fetch order details based on the orderId
     async function fetchOrderDetails() {
       try {
-        const response = await axios.get(`http://localhost:5000/api/orders/${orderId}`);
+        const response = await axios.get(`https://manzserver.sqaa-online.com/api/orders/${orderId}`);
         setOrderData(response.data.order);
       } catch (error) {
         console.error('Error fetching order details:', error);

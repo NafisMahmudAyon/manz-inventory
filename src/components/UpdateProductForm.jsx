@@ -29,10 +29,10 @@ const UpdateProductForm = () => {
     async function fetchProductDetails() {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/products/${productId}`
+          `https://manzserver.sqaa-online.com/api/products/${productId}`
         );
-        const supplierResponse = await axios.get('http://localhost:5000/api/suppliers');
-        const categoryResponse = await axios.get('http://localhost:5000/api/categories');
+        const supplierResponse = await axios.get('https://manzserver.sqaa-online.com/api/suppliers');
+        const categoryResponse = await axios.get('https://manzserver.sqaa-online.com/api/categories');
 
         const productData = response.data;
         console.log(productData);
@@ -141,7 +141,7 @@ const UpdateProductForm = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/products/${productId}`,
+        `https://manzserver.sqaa-online.com/api/products/${productId}`,
         updatedProductData
       );
       if (response.status === 200) {

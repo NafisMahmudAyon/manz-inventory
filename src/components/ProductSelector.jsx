@@ -8,7 +8,7 @@ const ProductSelector = ({ onSelectProduct }) => {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const response = await axios.get("http://localhost:5000/api/products");
+        const response = await axios.get("https://manzserver.sqaa-online.com/api/products");
         setProducts(response.data?.products);
         console.log(response.data);
       } catch (error) {

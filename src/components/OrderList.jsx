@@ -9,7 +9,7 @@ const OrderList = () => {
     // Fetch order list with product details from the database
     async function fetchOrders() {
       try {
-        const response = await axios.get('http://localhost:5000/api/orders');
+        const response = await axios.get('https://manzserver.sqaa-online.com/api/orders');
         setOrders(response.data.orders);
       } catch (error) {
         console.error('Error fetching orders:', error);

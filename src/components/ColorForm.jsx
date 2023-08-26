@@ -18,7 +18,7 @@ const ColorForm = ({ onSelectColor }) => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/colors', {
+      const response = await axios.post('https://manzserver.sqaa-online.com/api/colors', {
         name: colorName,
       });
 

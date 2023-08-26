@@ -35,15 +35,15 @@ const ProductForm = () => {
     async function fetchData() {
       try {
         const categoryResponse = await axios.get(
-          "http://localhost:5000/api/categories"
+          "https://manzserver.sqaa-online.com/api/categories"
         );
         const supplierResponse = await axios.get(
-          "http://localhost:5000/api/suppliers"
+          "https://manzserver.sqaa-online.com/api/suppliers"
         );
         const colorResponse = await axios.get(
-          "http://localhost:5000/api/colors"
+          "https://manzserver.sqaa-online.com/api/colors"
         );
-        const sizeResponse = await axios.get("http://localhost:5000/api/sizes");
+        const sizeResponse = await axios.get("https://manzserver.sqaa-online.com/api/sizes");
 
         setCategories(categoryResponse.data);
         setSuppliers(supplierResponse.data);
@@ -141,7 +141,7 @@ const ProductForm = () => {
     console.log(productData);
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/products",
+        "https://manzserver.sqaa-online.com/api/products",
         productData
       );
       //   console.log(productData);

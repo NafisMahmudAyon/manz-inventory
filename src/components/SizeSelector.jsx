@@ -10,7 +10,7 @@
 //       // Fetch size list based on the selected product and color
 //       async function fetchSizes() {
 //         try {
-//           const response = await axios.get(`http://localhost:5000/api/sizes/${colorId}`);
+//           const response = await axios.get(`https://manzserver.sqaa-online.com/api/sizes/${colorId}`);
 //           setSizeList(response.data.sizesResult);
 //         } catch (error) {
 //           console.error('Error fetching sizes:', error);
@@ -51,7 +51,7 @@ const SizeSelector = ({ productId, colorId, onSelectSize }) => {
       async function fetchSizes() {
         try {
           const response = await axios.get(
-            `http://localhost:5000/api/sizes/${colorId}`
+            `https://manzserver.sqaa-online.com/api/sizes/${colorId}`
           );
           setSizeList(response.data.sizesResult);
         } catch (error) {

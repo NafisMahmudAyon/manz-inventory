@@ -17,7 +17,7 @@ const CategoryForm = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/categories', {
+      const response = await axios.post('https://manzserver.sqaa-online.com/api/categories', {
         categoryName,
       });
 

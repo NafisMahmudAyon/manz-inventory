@@ -19,7 +19,7 @@ const SupplierForm = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/categories');
+      const response = await axios.get('https://manzserver.sqaa-online.com/api/categories');
       setCategories(response.data);
     } catch (error) {
       console.error('Error fetching categories:', error);
@@ -61,7 +61,7 @@ const SupplierForm = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/suppliers', {
+      const response = await axios.post('https://manzserver.sqaa-online.com/api/suppliers', {
         name,
         phone,
         address,

@@ -18,7 +18,7 @@ const SizeForm = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/sizes/', {
+      const response = await axios.post('https://manzserver.sqaa-online.com/api/sizes/', {
         name: sizeName,
       });
 
